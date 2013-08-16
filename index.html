@@ -101,6 +101,19 @@ CRMSalesManager-1.0.0.ipa是app打好的安装包，后面的版本为当前的a
 &lt;/dict&gt;
 &lt;/plist&gt;
 </code></pre>
+
+<p>=== 通知API端更新URL
+根据当前的版本号，更新API返回的版本字符串，以及URL。
+URL格式为： 
+itms-services://?action=download-manifest&amp;url=<a href="http://192.168.1.159/public/server/php/files/CRMSalesManager-1.0.0.plist">http://192.168.1.159/public/server/php/files/CRMSalesManager-1.0.0.plist</a></p>
+
+<p>注意修改后面 </p>
+
+<ul>
+<li>
+<a href="http://192.168.1.159">http://192.168.1.159</a> 为Web服务器ip或域名</li>
+<li>/public/server/php/files/CRMSalesManager-1.0.0.plist 为plist文件在Web服务器上的路径 </li>
+</ul><p>这样iOS会载入该URL，并根据plist配置文件来安装对应版本的ipa安装包了。</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/newbdez33">newbdez33</a></p>
